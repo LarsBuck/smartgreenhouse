@@ -9,6 +9,23 @@
 <p>Test Website for our Project</p>
 <a href="https://github.com/LarsBuck/smartgreenhouse.com">Our Repository</a>
 <img src="kraut.jpg"  width="300" height="300">
+<p id="demo">TEST TEST TEST</p>
+
+<button type="button" onclick="swap()">Click Me!</button>
+<script>
+var x=0;
+function swap(){
+if(x==0){
+	document.getElementById('demo').style.fontSize='35px';
+    	document.getElementById('demo').style.color='red';
+
+    x=1;
+}else{
+	document.getElementById('demo').style.fontSize='35px';
+    	document.getElementById('demo').style.color='blue';
+    x=0;
+}
+}
 
 
 
