@@ -2,6 +2,7 @@ body {
 font-family: Arial, sans.serif;
 margin:0;
 padding:0;
+background-color: red;
 background-image:url(images/kraut.jpg);
 background-position:center center;
 background-attachment:fixed;
