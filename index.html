@@ -3,9 +3,38 @@
 <head>
 <meta charset="UTF-8">
 <title>Testpage</title>
-<link rel="style" href="style.css/">
+<link rel="stylesheet" href="style.css/">
+   <script src="https://code.jquery.com/jquery-2.2.3.min.js"></script>
+   <script src="https://assets.shiftr.io/js/mqtt-latest.js"></script>
+   
 </head>
 <body>
+
+<script> $(function(){
+ var client = mqtt.connect('mqtt://7ab8d043:4acf899e28d7740c@broker.shiftr.io', {
+   clientId: 'browser-client'
+ });
+
+ client.on('connect', function(){
+   console.log('client has connected!');
+ });
+
+ client.on('message', function(topic, message) {
+  $('#data').text(message.toString());
+ });
+   client.subscribe('nodemcu2/photocell');
+})
+</script>
+
+	
+<title>NodeMCU Photocell Data</title>
+ <body>
+   <p id="data"></p>
+ </body>
+
+	
+	
+
 <div id="navigation">
 <!==Navigation==>
 
