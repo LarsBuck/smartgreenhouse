@@ -25,7 +25,8 @@
       
     client.on('message', function(topic, message) {
       console.log('new message:', topic, message.toString());
-      var tempText = '{"value":["' + message.toString() + '"]}'
+      //var tempText = '{"value":["' + message.toString() + '"]}';
+       var tempText = 24;
       $('#data').text(tempText);
     });
     
