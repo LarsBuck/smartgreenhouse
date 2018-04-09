@@ -14,16 +14,15 @@
     });
  
     client.on('connect', function(){
-       console.log('client has connected!');
+      console.log('client has connected!');
+
+      client.subscribe('/smartGreenhouse/Temperature');
     });
-    
-    
     
     client.on('message', function(topic, message) {
-        $('#data').text(message.toString());
+      console.log('new message:', topic, message.toString());
+      $('#data').text(message.toString());
     });
-    
-    client.subscribe('smartGreenhouse/Temperature');
     
     
    </script>
