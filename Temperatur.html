@@ -19,6 +19,10 @@
       client.subscribe('/smartGreenhouse/Temperature');
     });
     
+    setInterval(function(){
+       client.publish('/smartGreenhouse', '24');
+    }, 1000);  
+      
     client.on('message', function(topic, message) {
       console.log('new message:', topic, message.toString());
       $('#data').text(message.toString());
