@@ -25,7 +25,8 @@
       
     client.on('message', function(topic, message) {
       console.log('new message:', topic, message.toString());
-      $('#data').text(message.toString());
+      var tempText = '{"facts":["' + message.toString() + '"]}'
+      $('#data').text(tempText);
     });
     
     
