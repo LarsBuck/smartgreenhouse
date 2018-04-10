@@ -39,7 +39,7 @@ function onRequest(request, response){
         fs.createReadStream("./index.html").pipe(response);
         console.log(request.url);
     }
-    else if(request.method =='GET' && request.url=='/try'){
+    else if(request.method =='GET' && request.url=='/Temperatur.html'){
      console.log("I am getting the request");
      response.writeHead(200, {"Content-Type":"text/plain","Access-Control-Allow Origin":"*"});
 
